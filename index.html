@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive HTML, CSS and JavaScript practical programs dashboard">
+  <title>Web Practical Hub | HTML CSS JavaScript</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <nav class="nav-bar" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">&lt;/&gt;</span>
+          <span>Web Practical Hub</span>
+        </a>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">🌙</button>
+          <button class="menu-btn" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">☰</button>
+        </div>
+        <div class="main-nav" id="mainNav">
+          <a href="#programs">Programs</a>
+          <a href="#about">About</a>
+          <a href="README.md">README</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">519 practical programs</span>
+          <h1>Learn. Build. <span>Experiment.</span></h1>
+          <p>One interactive dashboard for your HTML, CSS and JavaScript practical work.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#programs">Explore Programs <span>→</span></a>
+            <a class="secondary-btn" href="#about">View Details</a>
+          </div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit-card orbit-one">&lt;HTML&gt;</div>
+          <div class="orbit-card orbit-two">{ CSS }</div>
+          <div class="orbit-card orbit-three">JS()</div>
+          <div class="orbit-core">WEB<br><small>LAB</small></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats" aria-label="Program statistics">
+        <div class="stat"><strong data-count="519">0</strong><span>Total Programs</span></div>
+        <div class="stat"><strong data-count="15">0</strong><span>HTML</span></div>
+        <div class="stat"><strong data-count="270">0</strong><span>CSS</span></div>
+        <div class="stat"><strong data-count="67">0</strong><span>JavaScript</span></div>
+        <div class="stat"><strong data-count="167">0</strong><span>JS Lab</span></div>
+      </section>
+
+      <section class="program-section" id="programs">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">PRACTICAL COLLECTION</span>
+            <h2>Choose your learning path</h2>
+            <p>Search, filter and open any program collection.</p>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="programSearch" type="search" placeholder="Search programs..." autocomplete="off">
+          </label>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filter programs">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="html">HTML</button>
+          <button class="filter-btn" type="button" data-filter="css">CSS</button>
+          <button class="filter-btn" type="button" data-filter="javascript">JavaScript</button>
+          <button class="filter-btn" type="button" data-filter="lab">JS Lab</button>
+        </div>
+
+        <div class="card-grid" id="cardGrid">
+          <article class="program-card html-card" data-category="html" data-search="html structure forms media semantic tags layout">
+            <div class="card-top"><span class="program-icon">&lt;/&gt;</span><span class="pill">15 Programs</span></div>
+            <h3>HTML Programs</h3>
+            <p>Structure, forms, media, semantic tags and responsive layout basics.</p>
+            <div class="progress"><span style="width: 18%"></span></div>
+            <a class="card-link" href="html/index.html">View HTML Programs <span>↗</span></a>
+          </article>
+
+          <article class="program-card css-card" data-category="css" data-search="css styling layouts animations components dashboard ui">
+            <div class="card-top"><span class="program-icon">{ }</span><span class="pill">270 Programs</span></div>
+            <h3>CSS Programs</h3>
+            <p>Styling, layouts, animations, components and complete UI systems.</p>
+            <div class="progress"><span style="width: 100%"></span></div>
+            <a class="card-link" href="css/index.html">View CSS Programs <span>↗</span></a>
+          </article>
+
+          <article class="program-card js-card" data-category="javascript" data-search="javascript logic dom events forms storage mini projects">
+            <div class="card-top"><span class="program-icon">JS</span><span class="pill">67 Programs</span></div>
+            <h3>JavaScript Programs</h3>
+            <p>Logic, DOM manipulation, events, forms, storage and mini projects.</p>
+            <div class="progress"><span style="width: 25%"></span></div>
+            <a class="card-link" href="javascript/index.html">View JavaScript Programs <span>↗</span></a>
+          </article>
+
+          <article class="program-card lab-card" data-category="lab" data-search="javascript lab events validation browser objects storage mini projects dom manipulation">
+            <div class="card-top"><span class="program-icon">⚡</span><span class="pill">167 Programs</span></div>
+            <h3>JavaScript Lab</h3>
+            <p>Events, validation, browser objects, web storage, mini projects and DOM.</p>
+            <div class="progress"><span style="width: 62%"></span></div>
+            <a class="card-link" href="javascript-lab/index.html">View JavaScript Lab <span>↗</span></a>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>No matching program section found.</p>
+      </section>
+
+      <section class="feature-grid" id="about">
+        <div class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Organized</h3>
+          <p>Programs are separated into HTML, CSS, JavaScript and JavaScript Lab collections.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Interactive</h3>
+          <p>Use search, category filters, animated statistics and light/dark theme controls.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>GitHub Ready</h3>
+          <p>All navigation uses relative paths so the project works smoothly with GitHub Pages.</p>
+        </div>
+      </section>
+
+      <section class="lab-note">
+        <div>
+          <span class="section-kicker">JAVASCRIPT LAB</span>
+          <h2>Keep experimenting.</h2>
+          <p>Explore Events, Forms & Validation, Browser Objects, Web Storage, Mini Projects and DOM Manipulation.</p>
+        </div>
+        <a class="primary-btn" href="javascript-lab/index.html">Open JS Lab <span>→</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>Web Practical Hub</strong><span>HTML • CSS • JavaScript</span></div>
+      <span>519 programs · Practical Assignment</span>
+    </footer>
+  </div>
+  <script src="assets/script.js"></script>
+</body>
+</html>

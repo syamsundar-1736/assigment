@@ -1,0 +1,5 @@
+/* External stylesheet used by the Internal and External CSS demo */
+p {
+    color: green;
+    font-weight: bold;
+}
